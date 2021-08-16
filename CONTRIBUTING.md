@@ -3,14 +3,13 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd @ember/render-modifiers`
-* `yarn install`
+* `cd test-testem`
+* `npm install`
 
 ## Linting
 
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
+* `npm run lint`
+* `npm run lint:fix`
 
 ## Running tests
 

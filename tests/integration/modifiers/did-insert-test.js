@@ -4,17 +4,19 @@ import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Component from '@ember/component';
 
-module('Integration | Modifier | did-insert', function(hooks) {
+module('Integration | Modifier | did-insert', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it basically works', async function(assert) {
+  test('it basically works', async function (assert) {
     assert.expect(2);
 
-    this.someMethod = element => {
+    this.someMethod = (element) => {
       assert.equal(element.tagName, 'DIV', 'correct element tagName');
       assert.dom(element).hasAttribute('data-foo', 'some-thing');
     };
-    await render(hbs`<div data-foo="some-thing" {{did-insert this.someMethod}}></div>`);
+    await render(
+      hbs`<div data-foo="some-thing" {{did-insert this.someMethod}}></div>`
+    );
   });
 
   test('it can accept arguments', async function(assert) {
