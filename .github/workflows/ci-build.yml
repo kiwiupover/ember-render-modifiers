@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 10.x
+          node-version: 12.x
       - name: install dependencies
         run: yarn install
       - name: lint:js
@@ -49,10 +49,6 @@ jobs:
           - ember-canary
           - ember-default-with-jquery
           - embroider-safe
-        allow-failure: [false]
-        include:
-          - ember-try-scenario: embroider-optimized
-            allow-failure: true
 
     steps:
       - uses: actions/checkout@v2
